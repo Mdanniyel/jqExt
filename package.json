@@ -1,0 +1,27 @@
+{
+  "name": "jqExt",
+  "version": "0.0.6",
+  "description": "jQuery extensions and native javascript extensions",
+  "build_number": 42,
+  "main": "build.mjs",
+  "directories": {
+    "doc": "docs",
+    "test": "test"
+  },
+  "scripts": {
+    "build": "node build.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iplan/jqExt.git"
+  },
+  "author": "",
+  "license": "MIT and GPLv2",
+  "bugs": {
+    "url": "https://github.com/iplan/jqExt/issues"
+  },
+  "homepage": "https://github.com/iplan/jqExt#readme",
+  "dependencies": {
+    "esbuild": "0.17.18"
+  }
+}

@@ -1,45 +1,51 @@
-# [jqExt]() - jQuery extensions
-================================
+jqExt - jQuery Extensions
+=========================
 
-jqExt extends core javascript classes with utility methods. The guidelines are to be similar to ruby api yet leave Object prototype unchanged. 
-Also there are minor extensions to jQuery framework. 
+jqExt is a collection of utility methods that extend the functionality of core JavaScript classes, while following the guidelines of the Ruby API. Additionally, there are some minor extensions to the jQuery framework.
 
-* [API documentation](https://github.com/alextk/jqExt/wiki/) can be found in project wiki.
-* Also there are [Release notes](https://github.com/alextk/jqExt/wiki/Release-notes)
+API Documentation and Release Notes
+-----------------------------------
 
+The API documentation and release notes can be found in the project's [wiki](https://github.com/alextk/jqExt/wiki/).
 
-
-Pre-compiled scripts
+Pre-Compiled Scripts
 --------------------
-If you're not interested in compiling your own version of jqExt, you can grab the pre-compiled scripts from the
-[dist](https://github.com/alextk/jqExt/tree/master/dist/) directory and get started quickly. Otherwise, take a look below.
 
+If you're not interested in compiling your own version of jqExt, pre-compiled scripts are available in the [dist](https://github.com/alextk/jqExt/tree/master/dist/) directory. Simply grab the one you need to get started quickly.
 
-What you need to build jqExt
-----------------------------
-In order to build jqExt, you need to ruby 1.8.7, Node.js 0.2 or later, and git 1.7 or later.
-(Earlier versions might work OK, but are not tested.)
+Getting Started with Development
+--------------------------------
 
-`rego-js-builder` gem installed:
+To set up your development environment for jqExt, follow these steps:
 
-    gem install rego-js-builder
+1.  Make sure you have Node.js installed on your system.
+2.  Clone this repository or download the zip file and extract it to your preferred location.
+3.  Open the terminal or command prompt and navigate to the project directory.
+4.  Run `npm install` to install all the necessary dependencies.
 
+### Adding Files to the `src` Directory
 
-Windows users:
+The `src` directory contains the source files for jqExt. If you want to modify or add to jqExt's functionality, you'll need to add your own files to this directory.
 
-   Install [msysgit](https://code.google.com/p/msysgit/) (Full installer for official Git),
-   [GNU make for Windows](http://gnuwin32.sourceforge.net/packages/make.htm).
-   Next you gonna need to build node js exe file and then copy it into mingw/bin folder. To build node js follow this guide:
-   (https://github.com/joyent/node/wiki/Building-node.js-on-mingw). To install c++/g++ compilers run:
+The `bundle.js` file in the `src` directory is the entry point for jqExt. It imports all the necessary files from the other directories in `src`. If you want to add your own files to jqExt, you must import them into `bundle.js` or create your own entry point and import it into `bundle.js`.
 
-   mingw-get install gcc g++ mingw32-make
-
-   To install phyton, simply download it from link on the guide, and add it to PATH variable.
-
-Building to a different directory
----------------------------------
-If you want to build jqLog to a directory that is different from the default location, you need to edit the Rakefile.
-
-Special thanks
+Building jqExt
 --------------
-Big shout-out to the jQuery team for providing the directory structure and base files for the git repo, as well as the base-files for the new NodeJS build system!
+
+To build jqExt, follow these steps:
+
+1.  Make sure you have installed the necessary dependencies as described in the previous section.
+2.  Navigate to the project directory in the terminal or command prompt.
+3.  Run `npm run build` to build the project using esbuild.
+
+This command will use the `build.mjs` script in the project root directory to create two new files in the `dist` directory:
+
+*   `dist/jquery.jqext-${version}.js`
+*   `dist/jquery.jqext-${version}.min.js`
+
+Please note that the `version` variable is defined in your `package.json` file, and `build_number` is generated during the build process.
+
+License and Acknowledgments
+---------------------------
+
+jqExt is dual-licensed under the MIT and GPLv2 licenses. Special thanks to Alex Tkachev for creating jqExt.
