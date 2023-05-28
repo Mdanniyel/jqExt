@@ -2,14 +2,14 @@
 * jqExt - jQuery extensions and native javascript extensions
 *
 * Version: 0.0.6
-* Build: 42
+* Build: 44
 * Copyright 2011 Alex Tkachev
 *
 * Dual licensed under MIT or GPLv2 licenses
 *   http://en.wikipedia.org/wiki/MIT_License
 *   http://en.wikipedia.org/wiki/GNU_General_Public_License
 *
-* Date: Thu May 04 2023 15:43:11
+* Date: Sun May 28 2023 11:13:26
 */
 (() => {
   // src/base.js

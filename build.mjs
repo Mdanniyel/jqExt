@@ -1,20 +1,16 @@
-// !todo: include version number in dist/jquery.jqext-:version.js
-// !todo: include dynamic prefix text that includes version number, build num & build date (like is license.txt is build via old process based on version.yml)
-// todo: update readme file
-
-// read version.json, take version number and build number, update built_at date
 import { readFileSync, writeFileSync } from 'fs'
 import * as esbuild from 'esbuild'
 
-let { name, description, version, build_number } = JSON.parse(readFileSync('package.json', 'utf8'))
-
-
+// read package.json and take from it the package name, description and version
+let package_json = JSON.parse(readFileSync('package.json', 'utf8'))
+package_json.build_number += 1
+let { name, description, version } = package_json
 
 let banner = `/*
 * ${name} - ${description}
 *
 * Version: ${version}
-* Build: ${build_number}
+* Build: ${package_json.build_number}
 * Copyright 2011 Alex Tkachev
 *
 * Dual licensed under MIT or GPLv2 licenses
@@ -37,3 +33,6 @@ await esbuild.build({
   minify: true,
   outfile: `dist/jquery.jqext-${version}.min.js`,
 })
+
+// update build number in package.json
+writeFileSync('package.json', JSON.stringify(package_json, null, 2))

@@ -2,7 +2,7 @@
   "name": "jqExt",
   "version": "0.0.6",
   "description": "jQuery extensions and native javascript extensions",
-  "build_number": 42,
+  "build_number": 44,
   "main": "build.mjs",
   "directories": {
     "doc": "docs",
